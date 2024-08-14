@@ -37,10 +37,18 @@ def draw_triangle(size):
 		print("*")
 		for _ in range(size - 1):
 			print(" ", end="")
-		print()
+		print()	# doesn't work...
 
-	def draw_diagonal(size, row):
-		pass
+	def draw_diagonal(size, width, row):
+		midpoint = width // 2 - 1
+
+		print(" ", end="")
+		for pixel in range(width):
+			if pixel == midpoint - row or pixel == midpoint + row:
+				print("*", end="")
+			else:
+				print(" ", end="")
+		print()
 
 	def draw_bottom(size):
 		for pixel in range(size):
@@ -59,7 +67,7 @@ def draw_triangle(size):
 		elif row == size - 1:
 			draw_bottom(size)
 		else:
-			draw_diagonal(size, row)
+			draw_diagonal(size, width, row)
 	print()
 
 
