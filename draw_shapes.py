@@ -34,10 +34,11 @@ def draw_triangle(size):
 	def draw_top(size):
 		for _ in range(size - 1):
 			print(" ", end="")
-		print("*")
+		print("*", end="")
 		for _ in range(size - 1):
 			print(" ", end="")
-		print()	# doesn't work...
+		print()
+
 
 	def draw_diagonal(size, width, row):
 		midpoint = width // 2 - 1
