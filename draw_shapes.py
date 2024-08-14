@@ -1,6 +1,3 @@
-'''
-NOTE: "width" and "height" are not needed
-'''
 def draw_square(size):
 	def draw_horizontal_border(size):
 		for pixel in range(size):
@@ -18,11 +15,8 @@ def draw_square(size):
 			else:
 				print("  ", end="")
 
-	width = size * 2 - 1
-	height = size
-
 	print(f"Drawing square of size {size}:")
-	for row in range(height):
+	for row in range(size):
 		if row == 0 or row == size - 1:
 			draw_horizontal_border(size)
 		else:
@@ -59,10 +53,9 @@ def draw_triangle(size):
 				print("* ", end="")
 	
 	width = size * 2 - 1
-	height = size
 
 	print(f"Drawing triangle of size {size}:")
-	for row in range(height):
+	for row in range(size):
 		if row == 0:
 			draw_top(size)
 		elif row == size - 1:
