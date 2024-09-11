@@ -75,19 +75,6 @@
 		iconAnchor: [25, 50],
 	});
 	const factory = L.marker([33.799691, -118.196411], {icon: factoryIcon}).addTo(map);
-
-	// DELETEME
-	const popup = L.popup();
-
-	function onMapClick(e) {
-	    popup
-			.setLatLng(e.latlng)
-			.setContent("You clicked the map at " + e.latlng.toString())
-			.openOn(map);
-	}
-
-	map.on('click', onMapClick);
-	// /DELETEME
 </script>
 
 </body>
